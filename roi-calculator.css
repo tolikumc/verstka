@@ -34,6 +34,7 @@ body,html {
 
 .calculator-header__sub-title {
     margin-top: 19px;
+    text-transform: uppercase;
 }
 
 .calculator-header__sub-title span {
@@ -49,8 +50,8 @@ body,html {
 .calculator-header__title span {
     color: #fff;
     font-size: 36px;
-    margin: 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .calculator-header__description {
@@ -61,13 +62,10 @@ body,html {
     margin-top: 40px;
     justify-content: center;
     max-width: 840px;
+    letter-spacing: 0.6px;
+    font-weight: 300;
+    
 }
-
-/*.calculator-header__description > span {*/
-/*display: flex;*/
-/*justify-content : center;*/
-
-/*}*/
 
 .calculator-header__select {
     display: flex;
@@ -119,14 +117,14 @@ body,html {
     align-items: center;
 }
 
-.digital-marketing__header div:first-child{
+.toggle-button{
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #FFC108;
+    background-color: #ffffff;
 }
 
-.digital-marketing__header:first-child img{
+.toggle-button img{
     position: relative;
     top: 6px;
     left: 8px;
@@ -136,7 +134,7 @@ body,html {
     font-size: 19px;
     color: #484F59;
     margin-left: 50px;
-    margin-right: 175px;
+    margin-right: 162px;
 }
 .digital-marketing__header > .digital-marketing__header--input{
     position: relative;
@@ -210,26 +208,34 @@ body,html {
 .digital-marketing__item{
     margin-top: 16px;    
 }
-.digital-marketing__item input{
+.digital-marketing__item-input input{
     border: 1px solid #000000;
     padding: 15px 0 15px 18px;
     max-width: 67px;
     border-radius: 5px;  
 }
-.digital-marketing__item input::placeholder{
+.digital-marketing__item-input input::placeholder{
     margin-left: 18px;
     font-size: 18px;
     color: #484F59;
 }
 
-.digital-marketing__calculation-based{
+.digital-marketing__item-input span{
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.digital-marketing__items .digital-marketing__calculation-based{
     background-color: rgb(100%, 76%, 3%, 0.3);
     flex-direction: column;
     border-radius: 5px;
     margin-top: 25px;
     max-width: 391px;
-    text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    padding-bottom: 24px;
 }
 .digital-marketing__calculation-based span{
     font-size: 14px;
@@ -248,7 +254,33 @@ body,html {
 .digital-marketing__calculation-based span>.item{
     text-decoration: none;
 }
+.product-price{
+    background-color: rgb(100%, 76%, 3%, 0.39);
+    display: flex;
+    flex-direction: column;
+}
 
+.product-price__header{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.analytics-report{
+    background-color:  rgb(100%, 76%, 3%, 0.28);
+    display: flex;
+    flex-direction: column;
+}
+
+.analytics-report__header{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    align-items: center
+}
+.analytics-report__header .toggle-button{
+    margin-right: 40px;
+}
 
 
 

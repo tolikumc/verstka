@@ -14,6 +14,13 @@ body,html {
     margin: 0 auto;
 }
 
+.toggle-button.active{
+    background-color: #FFC108;
+}
+.toggle-button.active img{
+    transform: rotate(180deg);
+}
+
 .calculator-header {
     background-color: #FFC107;
     display: flex;
@@ -112,9 +119,12 @@ body,html {
 .digital-marketing__header{
     display: flex;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 35px;
+    margin-top: 28px;
+    margin-bottom: 30px;
     align-items: center;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .toggle-button{
@@ -122,6 +132,8 @@ body,html {
     height: 32px;
     border-radius: 50%;
     background-color: #ffffff;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.1);
+    transform: rotate(180deg);
 }
 
 .toggle-button img{
@@ -130,16 +142,13 @@ body,html {
     left: 8px;
 }
 
-.digital-marketing__header span{
-    font-size: 19px;
-    color: #484F59;
-    margin-left: 50px;
-    margin-right: 162px;
+.digital-marketing__header .header-title {
+    margin-right: 190px;
 }
 .digital-marketing__header > .digital-marketing__header--input{
     position: relative;
 }
-.digital-marketing__header > .digital-marketing__header--input > img{
+.digital-marketing__header > .digital-marketing__header--input > span{
     position: absolute;
     left: 18px;
     top: 18px;
@@ -152,11 +161,12 @@ body,html {
     height: 52px;
     font-size: 20px;
     padding-left: 30px;
+    border: 1px solid #000000;
 }
 .digital-marketing__header--input > input::placeholder{
     font-size: 18px;
     font-weight: 300;
-    color:#b6b6b6;
+    color:#191D21;
 
     
 }
@@ -191,19 +201,23 @@ body,html {
     border: 1px solid #000000;
 }
 
-.digital-marketing__item-first > input::placeholder{
+.digital-marketing__item-first input::placeholder{
     font-size: 18px;
     font-weight: 300;
-    color:#484F59;   
+    color: #191D21;   
 }
 .digital-marketing__item-first div{
     position: relative;
 }    
 
-.digital-marketing__item-first div img{
+.digital-marketing__item-first div span{
     position: absolute;
-    left: 18px;
-    top: 18px;
+    left: -52px;
+    font-size: 18px;
+    height: 19px;
+    color: #191D21;
+    font-weight: unset;
+    top: 17px;
 }
 .digital-marketing__item{
     margin-top: 16px;    
@@ -217,7 +231,7 @@ body,html {
 .digital-marketing__item-input input::placeholder{
     margin-left: 18px;
     font-size: 18px;
-    color: #484F59;
+    color: #191D21;
 }
 
 .digital-marketing__item-input span{
@@ -263,12 +277,64 @@ body,html {
 .product-price__header{
     display: flex;
     margin: 0 auto;
+    max-width: 700px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 28px;
+    margin-top: 28px;
+
+}
+.product-price .digital-marketing__calculation-based{
+    margin-top: 0;
+}
+
+.product-price__header-left{
+    display: flex;
+    align-items: center
+
+}
+.product-price__header-left input{
+    max-width: 71px;
+}
+
+.product-price__header-left .digital-marketing__header--input{
+    position: relative;
+}
+.product-price__header-left .digital-marketing__header--input span{
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+.product-price__header-left .toggle-button{
+    margin-right: 40px;
+}
+
+.product-price__header-right{
+    display: flex;
     align-items: center;
 }
+.header-title{
+    margin-right: 18px;
+    color: #484F59;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .analytics-report{
     background-color:  rgb(100%, 76%, 3%, 0.28);
     display: flex;
     flex-direction: column;
+}
+
+.analytics-report__header .digital-marketing__item-input {
+    display: flex;
+    align-items: center;
+}
+
+.analytics-report__header .header-title{
+    margin-right: 95px;
 }
 
 .analytics-report__header{
@@ -276,10 +342,117 @@ body,html {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 35px;
-    align-items: center
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
 }
-.analytics-report__header .toggle-button{
-    margin-right: 40px;
+
+.result{
+    display: flex;
+    max-width: 816px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 51px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+    margin-bottom: 124px;
+    border-radius: 5px;
+}
+.result_title{
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+.result_image-items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.result_image-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result_image-item img{
+    height: 71px;
+    width: 81px;
+    margin-bottom: 10px;
+}
+
+.img-description{
+    color: #FFC107;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.img-description img{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 0;
+}
+.result_image-item-desc{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 17px;
+    color: #323C47;
+}
+.result_descriptions{
+    max-width: 632px;
+    width: 100%;
+    border-top: 1px solid #D8D8D8;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 35px;
+}
+
+.result_descriptions-text{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result_sort-text{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.result_copy-url{
+    margin: 0 auto;
+    max-width: 636px;
+    width: 100%;
+    background-color: #F9F9F9;
+    text-align: center;
+    padding: 28px 0;
+    margin-bottom: 50px;
+}
+.result_copy-url span{
+    font-size: 14px;
+    font-weight: 300;
+    color: #323C47;
+}
+.result_copy-url button{
+    color: #ffffff;
+    background-color: #FFC107;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 21px;
+}
+.result_copy-url input{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    margin-left: 15px;
+
 }
 
 

@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="roi-calculator.css">
 
 
-    <script type="application/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="accordion-toggle-script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -56,31 +56,30 @@
             </div>
             <div class="calculator-header__select-type">
                 <label for="Currency">Currency</label>
-                <select name="Currency" id="Currency">
-                    <option selected value="">US Dollar</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
+                <select name="Currency" id="currency-select">
+                    <option selected value="$">US Dollar</option>
+                    <option value="€">Euro</option>
+                    <option value="£">Pound</option>
                 </select>
             </div>
         </div>
     </section>
     <section class="digital-marketing">
         <div class="digital-marketing__header">
-            <div class="toggle-button">
+            <div class="toggle-button" id="toggle">
                 <img src="./img/Combined.svg" alt="check">
             </div>
-            <span>Monthly spend on digital marketing</span>
+            <span class='header-title'>Monthly spend on digital marketing</span>
             <div class="digital-marketing__header--input">
-                <img src="./img/dollar.svg" alt="dollar">
+                <span class="currency">$</span>
                 <input type="number" placeholder="30,000">
             </div>
         </div>
-        <div class="digital-marketing__items">
+        <div class="digital-marketing__items" id="content">
             <div class="digital-marketing__item-first">
                 <span>Advertising</span>
                 <div>
-                    <img src="./img/dollar.svg" alt="dollar">
+                    <span class="currency">$</span>
                     <input type="text" placeholder="10,000">
                 </div>
             </div>
@@ -126,10 +125,10 @@
                     <span class="item">%</span>
                 </span>
                 <span>Costs per hour 
-                    <span class="item">
+                    <span class="currency">
                         $ 
-                        <span>50</span>
                     </span>
+                    <p contenteditable="true">50</p>
                 </span>
 
             </div>
@@ -139,23 +138,28 @@
     </section>
     <section class="product-price">
         <div class="product-price__header">
-          <div class="toggle-button">
-                <img src="./img/Combined.svg" alt="check">
-          </div>
-          <span>Avg product price</span>
-            <div class="digital-marketing__header--input">
-                <img src="./img/dollar.svg" alt="dollar">
-                <input type="number" placeholder="50">
+            <div class="product-price__header-left">
+                    <div class="toggle-button" id="toggle2">
+                            <img src="./img/Combined.svg" alt="check">
+                      </div>
+                      <span class='header-title'>Avg product price</span>
+                        <div class="digital-marketing__header--input">
+                            <span class="currency">$</span>
+                            <input type="number" placeholder="50">
+                        </div>
             </div>
-            <div class="digital-marketing__item">
-                <span>Avg monthly unit sales</span>
-                <div class="digital-marketing__item-input">
+            <div class="product-price__header-right" >
+                
+                    <span class='header-title'>Avg monthly unit sales</span>
+                    <div class="digital-marketing__item-input">
                         <input type="text" placeholder="520">
                     </div>
+               
+            
             </div>
-
+            
         </div>
-        <div class="digital-marketing__items">
+        <div class="digital-marketing__items" id='content2'>
             <div class="digital-marketing__calculation-based">
                 <span>Calculations based on:</span>
                     <span>Percentage saved with Oribi 
@@ -164,20 +168,21 @@
                     </span>                    
             </div>
         </div>
-    </div>
+    
 
     </section>
     <section class="analytics-report">
         <div class="analytics-report__header">
-                <div class="toggle-button">
+                <div class="toggle-button" id="toggle3">
                         <img src="./img/Combined.svg" alt="check">
                   </div>
-                  <span>Email marketing</span>
+                  <span class="header-title">Mounthly hopurs spent on analytics and reports</span>
                   <div class="digital-marketing__item-input">
                         <input type="text" placeholder="10">
+                        <span>Hours/ <br> mounth </span>
                     </div>
         </div>
-        <div class="digital-marketing__items">
+        <div class="digital-marketing__items" id='content3'>
         <div class="digital-marketing__item">
                 <span>Tracking and analysis</span>
                 <div class="digital-marketing__item-input">
@@ -206,18 +211,68 @@
                                 <span class="item">%</span>
                             </span>
                             <span>Costs per hour 
-                                <span class="item">
+                                <span class="currency">
                                     $ 
-                                    <span>50</span>
                                 </span>
+                                <span>50</span>
                             </span>
             
                         </div>
         </div>
     </section>
 
-</div><!-- wrapper -->
+    <section class="result">
+        <div class="result_title">
+            <span>Your MONTHLY Savings:</span>
+        </div>
+        <div class="result_image-items">
+            <div class="result_image-item">
+                <img src="./img/vallet.svg" alt="vallet">
+                <span class="img-description">
+                    <span class="currency">$</span>
+                        8,267
+                </span>
+                <span class="result_image-item-desc">Saved</span>
+            </div>
+            <div class="result_image-item">
+                <img src="./img/Graph.svg" alt="graph">
+                <span class="img-description">
+                    <span class="currency">$</span>
+                    8,267
+                </span>
+                <span class="result_image-item-desc">new revenue</span>
+            </div>
+            <div class="result_image-item">
+                <img src="./img/Time.svg" alt="time">
+                <span class="img-description">
+                    <span class="hours">32</span>
+                    hours
+                </span>
+                <span class="result_image-item-desc">you can now dedicate to </br> other projects</span>
+            </div>
+        </div>
+        <div class="result_descriptions">
+            <span class="result_descriptions-text">Every year, you save <span class="currency">$</span>
+                <span> 99,207</span> 
+                on your marketing expenses, </br> generate <span class="currency">$</span>
+                <span> 99,207</span>
+                 of new revenue, and take back <span class="currency">$</span>
+                <span> 99,207</span>
+                hours of </br> your and your employees’ time.
+            </span>
+        </div>
+        <div class="result_sort-text">
+            <span>Numbers are based on real results of thousands of Oribi users</span>
+        </div>
+        <div class="result_copy-url">
+            <span>Share your report:</span>
+            <input type="text" value="url" id="urlInput">
+            <button onclick="copyUrl()">Copy</button>
+        </div>
+    </section>
 
+</div><!-- wrapper -->
+<script src="scripts.js"></script>
 </body>
 
 </html>

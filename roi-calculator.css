@@ -148,14 +148,14 @@ html {
 .digital-marketing__header > .digital-marketing__header--input > span {
   position: absolute;
   left: 18px;
-  top: 20px;
+  top: 16px;
 }
 
 .digital-marketing__header--input > input {
   max-width: 128px;
   border-radius: 5px;
   border-width: 0;
-  height: 52px;
+  height: 43px;
   font-size: 20px;
   padding-left: 30px;
   border: 1px solid #000000;
@@ -191,7 +191,7 @@ html {
   max-width: 128px;
   border-radius: 5px;
   border-width: 0;
-  height: 52px;
+  height: 43px;
   font-size: 18px;
   padding-left: 30px;
   border: 1px solid #000000;
@@ -213,7 +213,7 @@ html {
   height: 19px;
   color: #191d21;
   font-weight: unset;
-  top: 18px;
+  top: 14px;
 }
 .digital-marketing__item {
   margin-top: 16px;
@@ -246,6 +246,7 @@ html {
   margin-bottom: 40px;
   align-items: flex-start;
   padding-bottom: 24px;
+  border-radius: 6px;
 }
 .digital-marketing__calculation-based span {
   font-size: 14px;
@@ -312,7 +313,7 @@ html {
 }
 .product-price__header-left .digital-marketing__header--input span {
   position: absolute;
-  top: 20px;
+  top: 16px;
   left: 18px;
 }
 

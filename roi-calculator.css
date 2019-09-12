@@ -172,6 +172,8 @@ html {
   max-width: 704px;
   margin: 0 auto;
   width: 100%;
+  border-top: 1px solid #323C47;
+  padding-top: 26px;
 }
 .digital-marketing__items span {
   font-size: 14px;
@@ -310,8 +312,8 @@ html {
 }
 .product-price__header-left .digital-marketing__header--input span {
   position: absolute;
-  top: 19px;
-  left: 20px;
+  top: 20px;
+  left: 18px;
 }
 
 .product-price__header-left .toggle-button {
